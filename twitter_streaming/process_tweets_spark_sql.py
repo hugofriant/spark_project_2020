@@ -21,7 +21,7 @@ hastags = lines.select(
     ).alias("hashtag")
 ).where(col("hashtag").startswith("#"))
 
-hashtagCounts = hastags.groupBy("hashtag").count()
+hashtagCounts = hastags.groupBy("hashtag").count().orderBy('count', ascending = False)
 
 query = hashtagCounts \
     .writeStream \

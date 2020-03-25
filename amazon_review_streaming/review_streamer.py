@@ -1,7 +1,7 @@
 import time
 import os
 
-filepath = '../amazon_reviews_multilingual_FR_v1_00.tsv'
+filepath = '../../amazon_reviews_multilingual_FR_v1_00.tsv'
 hdfspath = 'hdfs://sar01:9000/spark_project_2020'
 outpath = hdfspath + '/review_stream/'
 
